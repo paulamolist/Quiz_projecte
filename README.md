@@ -1,4 +1,4 @@
-﻿** Quiz_projecte**
+## **Quiz_projecte**
 
 Quiz de países. Tienes una pregunta o imágen y tienes que poner la respuesta correcta.
 
