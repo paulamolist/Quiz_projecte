@@ -1,11 +1,65 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projecte Quiz</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego de preguntas</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>EXEMPLE</h1>
+  <main class="juego">
+    <header class="cabecera">
+      <p id="progreso">PREGUNTA 1 / 3</p>
+
+      <div class="nombre-grupo">NOMBRE GRUPO</div>
+
+      <div class="marcador">
+        <span>puntos</span>
+        <span id="puntos" class="puntos">0/3</span>
+      </div>
+
+      <div id="tiempo" class="tiempo" aria-label="Tiempo restante">
+        15 s
+      </div>
+    </header>
+
+    <section class="panel-pregunta" aria-label="Pregunta actual">
+      <h1 id="pregunta">PREGUNTA 1: ejemplo</h1>
+    </section>
+
+    <!-- Mensaje y botones entre el enunciado y las respuestas -->
+    <div class="controles">
+      <p id="mensaje" role="status"></p>
+
+      <button id="siguiente" class="boton-control" type="button" hidden>
+        Siguiente pregunta
+      </button>
+
+      <button id="reiniciar" class="boton-control" type="button" hidden>
+        Volver a jugar
+      </button>
+    </div>
+
+    <section id="respuestas" class="respuestas" aria-label="Respuestas">
+      <button class="respuesta roja" type="button" data-indice="0">
+        <strong>A.</strong> <span></span>
+      </button>
+
+      <button class="respuesta verde" type="button" data-indice="1">
+        <strong>B.</strong> <span></span>
+      </button>
+
+      <button class="respuesta amarilla" type="button" data-indice="2">
+        <strong>C.</strong> <span></span>
+      </button>
+
+      <button class="respuesta azul" type="button" data-indice="3">
+        <strong>D.</strong> <span></span>
+      </button>
+    </section>
+  </main>
 </body>
+
 </html>
